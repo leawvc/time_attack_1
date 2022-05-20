@@ -1,0 +1,12 @@
+Index: ../Main.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../Main.java b/../Main.java
+new file mode 100644
+--- /dev/null	(date 1653041461925)
++++ b/../Main.java	(date 1653041461925)
+@@ -0,0 +1,2 @@
++public class Main {
++}
