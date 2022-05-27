@@ -75,7 +75,20 @@ class Minesweeper
     public int pick(int x, int y)
     {
         int numOfMine = 0;
-        // todo
+        if (map[x][y] == 1){
+            return -1;
+        }
+        for (int i = -1; i < 2; i++){
+            for (int j = -1; j < 2; j++){
+                if (x != 0 && y != 0){
+                    else if (map[x - i][y - j] == 1){
+                        numOfMine ++;
+                    }else {
+                        map[x - i][y - j] = 2;
+                    }
+                }
+            }
+        }
         return numOfMine;
     }
 
@@ -127,7 +140,7 @@ public class Main {
         System.out.println("Minesweeper start!!!");
         System.out.println("----------------------------------------------------");
         minesweeper.printMap();
-        while(minesweeper.checkMap()) {
+        while(minesweeper.checkMap() == false) {
             System.out.print("x(0~9) : ");
             int x = scanner.nextInt();
             System.out.print("y(0~9) : ");
